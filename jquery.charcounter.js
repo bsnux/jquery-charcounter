@@ -16,7 +16,8 @@
             maxChars: 80,
 			appendTo: 'insertBefore',
             htmlTxtStart: 'Te quedan ',
-            htmlTxtEnd: ' caracteres'
+            htmlTxtEnd: ' caracteres',
+            cssClass: 'charcounter'
         }
 
         return this.each(function() {
@@ -42,7 +43,9 @@
             if (options) {
                 $.extend(settings, options);
             }
-            var charCounterObj = $("<div class=\"charcounter\"></div>");
+            var charCounterObj = $("<div class=" + settings.cssClass + "></div>");
+            // Setting 'width'
+            charCounterObj.css('width', $(this).width());
             charCounterObj[settings.appendTo]($(this));
 
             // Setting 'html' content for widget

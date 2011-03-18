@@ -34,6 +34,8 @@ Parameters
 
 **htmlTxtEnd**: End text for the counter: Default: ' caracteres '
 
+**cssClass**: Name of the CSS class for the counter. Default: *charcounter*
+
 Example
 -------
 

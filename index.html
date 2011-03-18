@@ -3,7 +3,15 @@
 <head>
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
 <title>::. BSNUX .:: charcounter is a jQuery plugin for counting characters</title>
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js" 
+<style type="text/css" media="screen">
+   .mycounter {
+      font-family: Arial;
+      font-size: 0.8em;
+      color: red;
+      text-align: right;
+   }
+</style>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.5.1/jquery.min.js"
         type="text/javascript"></script>
 <script src="jquery.charcounter.js" type="text/javascript"></script>
 <script type="text/javascript">
@@ -12,6 +20,7 @@ $(document).ready(function(){
     $('#text2').charcounter( {maxChars: 20} );
     $('#text3').charcounter( {htmlTxtStart: '', htmlTxtEnd: ''} );
     $('#text4').charcounter( {appendTo: 'insertAfter', maxChars: 10} );
+    $('#text5').charcounter({cssClass: 'mycounter', htmlTxtStart: '', htmlTxtEnd: '',maxChars: 20 });
 });
 </script>
 </head>
@@ -20,5 +29,6 @@ $(document).ready(function(){
     <p><textarea id="text2" cols="30" rows="3"></textarea></p>
     <p><textarea id="text3" cols="30" rows="3"></textarea></p>
     <p><textarea id="text4" cols="30" rows="3"></textarea></p>
+    <p><textarea id="text5" cols="30" rows="3"></textarea></p>
 </body>
 </html>
