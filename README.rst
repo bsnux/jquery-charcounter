@@ -32,7 +32,7 @@ Parameters
 
 **htmlTxtStart**: Beginnig text for the counter. Default: 'Te quedan ' (Spanish text)
 
-**htmlTxtEnd**: End text for the counter: Default: ' caracteres '
+**htmlTxtEnd**: End text for the counter: Default: ' caracteres ' (Spanish text)
 
 **cssClass**: Name of the CSS class for the counter. Default: *charcounter*
 
