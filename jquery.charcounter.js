@@ -18,23 +18,23 @@
             htmlTxtStart: 'Te quedan ',
             htmlTxtEnd: ' caracteres',
             cssClass: 'charcounter'
-        }
+        };
 
         return this.each(function() {
             // Private function
             // XXX: It's better to allow namespace for bound events
             function calChars(){
-                var val = $(this).val(), length = val.length
+                var val = $(this).val(), length = val.length;
 
                 if(length >= settings.maxChars) {
                     val = val.substring(0, settings.maxChars); 				
-                };
+                }
 
                 if(length > settings.maxChars){
                     var originalScrollTopPosition = $(this).scrollTop();
                     $(this).val(val.substring(0, settings.maxChars));
                     $(this).scrollTop(originalScrollTopPosition);
-                };
+                }
 
                 var charsAvailable = settings.maxChars - $(this).val().length;
                 charCounterObj.html(settings.htmlTxtStart + charsAvailable + settings.htmlTxtEnd);
