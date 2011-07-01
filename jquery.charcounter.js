@@ -14,7 +14,7 @@
 
         var settings = {
             maxChars: 80,
-			appendTo: 'insertBefore',
+            appendTo: 'insertBefore',
             htmlTxtStart: 'Te quedan ',
             htmlTxtEnd: ' caracteres',
             cssClass: 'charcounter'
