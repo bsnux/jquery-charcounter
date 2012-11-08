@@ -1,12 +1,12 @@
 /**
 *   jQuery plugin for creating a char counter for textareas and text inputs
 *  
-*   Author: Arturo Fernandez - http://www.bsnux.com
+*   Author: Arturo Fernandez - http://www.bsnux.com/
 *   License: GPL v3
 *
 *   jQuery 1.3+ is required
 *
-*   This plugin is inspired by http://www.jqeasy.com/jquery-character-counter/
+*   This plugin was inspired by http://www.jqeasy.com/jquery-character-counter/
 **/
 (function($) {
 
@@ -15,19 +15,17 @@
         var settings = {
             maxChars: 80,
             appendTo: 'insertBefore',
-            htmlTxtStart: 'Te quedan ',
-            htmlTxtEnd: ' caracteres',
+            htmlTxtStart: 'You have ',
+            htmlTxtEnd: ' characters',
             cssClass: 'charcounter'
         };
 
         return this.each(function() {
-            // Private function
-            // XXX: It's better to allow namespace for bound events
             function calChars(){
                 var val = $(this).val(), length = val.length;
 
                 if(length >= settings.maxChars) {
-                    val = val.substring(0, settings.maxChars); 				
+                    val = val.substring(0, settings.maxChars);
                 }
 
                 if(length > settings.maxChars){
@@ -44,14 +42,14 @@
                 $.extend(settings, options);
             }
             var charCounterObj = $("<div class=" + settings.cssClass + "></div>");
-            // Setting 'width'
+            /* Setting 'width' */
             charCounterObj.css('width', $(this).width());
             charCounterObj[settings.appendTo]($(this));
 
-            // Setting 'html' content for widget
+            /* Setting 'html' content for widget */
             var charsAvailable = settings.maxChars - $(this).val().length;
             charCounterObj.html(settings.htmlTxtStart + charsAvailable + settings.htmlTxtEnd);
-            // Bind events
+            /* Bind events */
             $(this).bind('keydown keyup keypress', calChars);
         });
     };
