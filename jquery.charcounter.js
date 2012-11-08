@@ -1,6 +1,6 @@
 /**
 *   jQuery plugin for creating a char counter for textareas and text inputs
-*  
+*
 *   Author: Arturo Fernandez - http://www.bsnux.com/
 *   License: GPL v3
 *
@@ -8,9 +8,9 @@
 *
 *   This plugin was inspired by http://www.jqeasy.com/jquery-character-counter/
 **/
-(function($) {
+(function ($) {
 
-    $.fn.charcounter = function(options) {
+    $.fn.charcounter = function (options) {
 
         var settings = {
             maxChars: 80,
@@ -20,15 +20,15 @@
             cssClass: 'charcounter'
         };
 
-        return this.each(function() {
-            function calChars(){
+        return this.each(function () {
+            function calChars() {
                 var val = $(this).val(), length = val.length;
 
-                if(length >= settings.maxChars) {
+                if (length >= settings.maxChars) {
                     val = val.substring(0, settings.maxChars);
                 }
 
-                if(length > settings.maxChars){
+                if (length > settings.maxChars) {
                     var originalScrollTopPosition = $(this).scrollTop();
                     $(this).val(val.substring(0, settings.maxChars));
                     $(this).scrollTop(originalScrollTopPosition);
@@ -53,4 +53,4 @@
             $(this).bind('keydown keyup keypress', calChars);
         });
     };
-}) (jQuery);
+})(jQuery);
